@@ -1,10 +1,17 @@
-// pages/Components/components/component.js
+// pages/Component/Navheader/Navheader.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-
+    title:{
+      type:String,
+      value:"我是titile部分"
+    },
+    nav:{
+      type:String,
+      value:"我是nav部分"
+    }
   },
 
   /**

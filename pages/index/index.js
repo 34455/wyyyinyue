@@ -14,7 +14,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: async function (options) {
-    // request('http://localhost:3000/banner',{type:2})
+    // 首页轮播图
   let requestBanner =await request('/banner',{type:2})
   //  console.log('请求成功：',requestBanner); 
    this.setData({
@@ -23,8 +23,6 @@ Page({
   //  console.log(this.data.bannerlist,"bannerlist");
     // 推荐歌单
     let recommd = await request('/personalized',{limit:10})
-    console.log(recommd);
-    
     this.setData({
       recommdlist:recommd.result
     })

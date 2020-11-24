@@ -31,15 +31,7 @@
     <!-- 推荐歌曲区域 -->
     <view class="remmondContener">
         <!-- 头部区域 -->
-        <view class="header">
-            <text class="title">
-                推荐歌曲
-            </text>
-            <view>
-                <text>为你精心推荐</text>
-                <text class="more">推荐更多</text>
-            </view>
-        </view>
+            <Navheader title="推荐歌曲" nav="为你精心推荐"></Navheader>
         <!-- 内容区 -->
         <scroll-view class="recommendScroll" enable-flex="true" scroll-x="true">
             <view class="scrollItem" wx:for="{{recommdlist}}" wx:key="id" wx:for-item="recommdlists">
@@ -48,5 +40,11 @@
             </view>
           
         </scroll-view>
+    </view>
+    <!-- 排行榜区域 -->
+    <view class="topList">
+      <!-- 头部区域 -->
+        <Navheader title="排行榜" nav="热歌风向标"></Navheader>
+        <!-- 内容区 -->
     </view>
 </view>

@@ -52,13 +52,15 @@
 
 .remmondContener {
     padding: 20rpx;
+    height: 400rpx;
 }
 
-.remmondContener .header {
+/* .remmondContener .header {
     display: flex;
     flex-direction: column;
     font-size: 32rpx;
     margin: 10rpx 0;
+   
 }
 
 .header .title {
@@ -73,13 +75,14 @@
     border: 1px solid #333;
     border-radius: 40rpx;
     font-size: 24rpx
-}
+} */
 
 
 /* 内容区 */
 
 .recommendScroll {
     display: flex;
+   
 }
 
 .scrollItem {
@@ -100,4 +103,9 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     font-size: 26rpx;
+}
+
+/* 排行榜 */
+.topList{
+    padding: 20rpx;
 }
