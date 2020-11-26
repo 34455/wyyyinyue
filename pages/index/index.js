@@ -32,7 +32,6 @@ Page({
     // 排行榜
     let index = 0;
     let topArr = [];
-    let name = null;
     while (index < 5) {
       let toplist = await request('/top/list', { idx: index++ })
       toplist.playlist.tracks.forEach(item => {
@@ -44,9 +43,7 @@ Page({
     this.setData({
       toplist: topArr
     })
-    console.log('datatoplist', this.data.toplist);
-    // let toplist = await request('/top/list', { idx: 1 })
-    // console.log(toplist);
+    // console.log('datatoplist', this.data.toplist);
   },
 
   /**
