@@ -209,3 +209,27 @@
 .cardList .card-item .more {
     float: right;
 }
+
+/* 最近播放 */
+.personalContent .scrollView {
+    display: flex;
+    height: 160rpx;
+}
+
+.personalContent .recentPlay {
+    display: flex;
+}
+
+.recentPlayContainer .title {
+    padding-left: 20rpx;
+    font-size: 26rpx;
+    color: #333;
+    line-height: 80rpx;
+}
+
+.personalContent .recentPlay image {
+    width: 160rpx;
+    height: 160rpx;
+    margin-left: 20rpx;
+    border-radius: 20rpx;
+}
