@@ -12,8 +12,8 @@ Page({
   data: {
     covertranslate: `translateY(0)`,
     transition: ``,
-    userinfo:{},
-    recentPlayList:[]
+    userinfo: {},
+    recentPlayList: []
   },
   // 手指触发最初位置
   handlestart(e) {
@@ -43,7 +43,7 @@ Page({
     this.setData({
       covertranslate: `translateY(0rpx)`,
       transition: `transform 1s linear`,
-      recentPlayListData:[]
+      recentPlayListData: []
     })
   },
   // 跳转到个人中心
@@ -56,35 +56,34 @@ Page({
    * 生命周期函数--监听页面加载
    */
 
-  onLoad:  function (options) {
+  onLoad: function (options) {
     // 获取用户信息
     let userinfo = wx.getStorageSync('userinfo')
     // console.log("userinfo",userinfo); 
-    if(userinfo){
+    if (userinfo) {
       this.setData({
-        userinfo:JSON.parse(userinfo)
+        userinfo: JSON.parse(userinfo)
       })
-     
-    }
       // 获取用户播放量
-    this.playrecord( this.data.userinfo.userId)
+      this.getUserRecentPlayList(this.data.userinfo.userId)
+    }
     // console.log(id)
   },
-   // 获取用户播放量
-  async playrecord(userId){
-    console.log(userId)
-  const recentPlayListData= await request('/user/record',{uid:userId});
-    console.log('playrecordlist',recentPlayListData)
-    let index =0;
-  let recentPlayList= this.recentPlayListData.weekData.slice(0,10).map((item)=>{
-      item.id=index++
+  // 获取用户播放量
+  async getUserRecentPlayList(userId) {
+    // console.log(userId)
+     let recentPlayListData = await request('/user/record', { uid:userId, type: 0 });
+    // console.log('playrecordlist', recentPlayListData)
+    let index = 0;
+    let recentPlayList = recentPlayListData.allData.splice(0, 10).map(item => {
+      item.id = index++
       return item
     })
-  this.setData({
-    recentPlayList
-  })
-  
- },
+    this.setData({
+      recentPlayList
+    })
+
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -211,25 +211,16 @@
 }
 
 /* 最近播放 */
-.personalContent .scrollView {
+.personalContent .recentScroll {
     display: flex;
     height: 160rpx;
 }
-
-.personalContent .recentPlay {
-    display: flex;
+.recentItem{
+    width: 160rpx;
+    margin-right: 20rpx;
 }
-
-.recentPlayContainer .title {
-    padding-left: 20rpx;
-    font-size: 26rpx;
-    color: #333;
-    line-height: 80rpx;
-}
-
-.personalContent .recentPlay image {
+.recentItem image{
     width: 160rpx;
     height: 160rpx;
-    margin-left: 20rpx;
-    border-radius: 20rpx;
+    border-radius: 10rpx;
 }
