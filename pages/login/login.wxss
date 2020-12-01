@@ -1,4 +1,8 @@
-/* pages/login/login.wxss */.wrapper{
+/* pages/login/login.wxss */
+.container{
+  height: 100%;
+}
+.wrapper{
   position:relative;
   z-index: 90;
   padding-bottom: 40rpx;

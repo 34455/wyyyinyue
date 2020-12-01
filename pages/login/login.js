@@ -46,7 +46,7 @@ Page({
       })
       return;
     }
-    const result = await request('/login/cellphone', { phone, password })
+    const result = await request('/login/cellphone', { phone, password,isLogin:true })
     // console.log('reqlogin',rqLogin)
     if (result.code === 200) {
       wx.showToast({
