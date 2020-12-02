@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/personl/personl",
     "pages/video/video",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/recommendSong/recommendSong",
+    "pages/songDetail/songDetail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#d43c33",

@@ -55,6 +55,7 @@
 .videoList {
   margin-top: 20rpx;
   height: calc(100vh - 160rpx);
+   /* height: calc(100vh - 100rpx);页面触底测试  */
 }
 
 .videoItem {

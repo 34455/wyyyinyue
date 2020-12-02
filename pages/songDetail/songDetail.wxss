@@ -1,0 +1,100 @@
+/* pages/songDetail/songDetail.wxss */
+
+.detailContainer {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60rpx;
+  box-sizing: border-box;
+}
+
+.circle {
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  z-index: 100;
+}
+
+.needle {
+  width: 192rpx;
+  height: 274rpx;
+  /* border: 1px solid red; */
+  position: relative;
+  z-index: 99;
+  left: 58rpx;
+  top: -40rpx;
+  transform-origin: 40rpx 0;
+  transform: rotate(-20deg);
+  transition: transform 1s;
+}
+
+.needles {
+  transform: rotate(0deg);
+}
+
+.discContainer {
+  width: 598rpx;
+  height: 598rpx;
+  /* border: 1px solid red; */
+  position: relative;
+  top: -160rpx;
+}
+
+.disc {
+  width: 598rpx;
+  height: 598rpx;
+}
+
+.discAnimation {
+  animation: disc 4s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes disc {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.musicImg {
+  width: 370rpx;
+  height: 370rpx;
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* 底部 */
+
+.bottomPlay {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 40rpx;
+  border-top: 1px solid #fff;
+  display: flex;
+}
+
+.bottomPlay text {
+  width: 20%;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 50rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.bottomPlay text.big {
+  font-size: 80rpx;
+}

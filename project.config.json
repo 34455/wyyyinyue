@@ -92,6 +92,20 @@
 					"pathName": "pages/video/video",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "每日推荐",
+					"pathName": "pages/recommendSong/recommendSong",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "歌曲详情",
+					"pathName": "pages/songDetail/songDetail",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

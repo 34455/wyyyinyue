@@ -16,7 +16,7 @@
 		</view>
 	</scroll-view>
 	<!-- 视频列表 -->
-	<scroll-view class="videoList" scroll-y>
+	<scroll-view class="videoList" scroll-y refresher-enabled bindrefresherrefresh="refresher" refresher-triggered="{{isTrigger}}" bindscrolltolower="tolower">
 		<view wx:if="{{videoList.length>0}}">
 			<view class="videoItem" wx:for="{{videoList}}" wx:key="id">
 				<video class="common" src="{{item.data.urlInfo.url}}" bindplay="handlePlay" id="{{item.data.vid}}" poster="{{item.data.coverUrl}}" wx:if="{{videoId===item.data.vid}}" object-fit="fill" bindtimeupdate="handleTimeupdate" bindended="handleTimeend"></video>
