@@ -1,5 +1,6 @@
 // pages/recommendSong/recommendSong.js
 import request from "../../utils/request.js"
+import pubsub from 'pubsub-js'
 Page({
 
   /**
@@ -31,6 +32,9 @@ Page({
       })
     }
     this.getRecommendList()
+    pubsub.subscribe('switchType',(msg,type)=>{
+      console.log(type)
+     })
   //  获取时间
     this.setData({
       year: new Date().getFullYear(),
@@ -47,6 +51,14 @@ Page({
       recommendList:recommendList.recommend
     })
     // console.log(this.data.recommendList)
+  },
+  toSongdetail(event){
+    let {song} =event.currentTarget.dataset
+    wx.navigateTo({
+      url: '/pages/songDetail/songDetail?musicId='+song,
+    })
+    // console.log(event)
+   
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

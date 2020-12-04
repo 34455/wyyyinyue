@@ -1,0 +1,23 @@
+{
+  "name": "wyyyinyue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/34455/wyyyinyue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/34455/wyyyinyue/issues"
+  },
+  "homepage": "https://github.com/34455/wyyyinyue#readme",
+  "dependencies": {
+    "pubsub-js": "^1.9.1"
+  }
+}

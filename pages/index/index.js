@@ -37,15 +37,18 @@ Page({
       toplist.playlist.tracks.forEach(item => {
         item.singer = item.ar[0].name
       });
-      topArr.push({ name: toplist.playlist.name, tracks: toplist.playlist.tracks })
-    }
+      topArr.push({ name: toplist.playlist.name, tracks: toplist.playlist.tracks.slice(0,3) })
 
+    }
     this.setData({
       toplist: topArr
     })
-    // console.log('datatoplist', this.data.toplist);
   },
-
+  handleRecommend(){
+    wx.navigateTo({
+      url: '/pages/recommendSong/recommendSong',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
