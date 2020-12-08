@@ -1,7 +1,7 @@
 <!--pages/video/video.wxml-->
 <view class="viewContentior">
 	<!-- 头部 -->
-	<view class="viewHeader">
+	<view class="viewHeader"  bindtap="toSearch">
 		<image src="../../static/images/video/video.jpg"></image>
 		<view class="search">搜索音乐</view>
 		<image src="../../static/images/logo.png"></image>

@@ -46,7 +46,13 @@ Page({
   },
   handleRecommend(){
     wx.navigateTo({
-      url: '/pages/recommendSong/recommendSong',
+      url: '/songPackger/pages/recommendSong/recommendSong',
+    })
+  },
+  // 去其他页面
+  toOther(){
+    wx.navigateTo({
+      url: '/otherPackger/pages/other/other',
     })
   },
   /**

@@ -49,12 +49,6 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
     "plugin": {
       "list": []
     },
@@ -106,6 +100,17 @@
           "name": "歌曲详情",
           "pathName": "pages/songDetail/songDetail",
           "query": "",
+          "scene": null
+        },
+        {
+          "name": "搜索歌曲",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "other",
+          "pathName": "pages/other/other",
           "scene": null
         }
       ]

@@ -1,5 +1,8 @@
 /* pages/recommendSong/recommendSong.wxss */
-
+@import "../../static/iconfont/iconfont.wxss";
+page{
+    height: 100%;
+}
 .recommendContainer {
     height: 100%;
     /* position: relative; */
@@ -82,6 +85,12 @@
     overflow: hidden;
 }
 
+.musicContent .musicName{
+   width:500rpx;
+   white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 .musicContent text {
     font-size: 26rpx;
     margin-left: 10rpx

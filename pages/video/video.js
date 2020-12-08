@@ -1336,6 +1336,12 @@ Page({
       videoList
     })
   },
+  // 跳转到搜索页面
+  toSearch() {
+    wx.navigateTo({
+      url: '/pages/search/search',
+    })
+  },
   onReady: function () {
 
   },
@@ -1379,19 +1385,19 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function ({from}) {
+  onShareAppMessage: function ({ from }) {
     //  console.log(from)
-    if(from==='button'){
-      return{
-        title:"自定义video页面button转发",
-        path:"/pages/video/video",
-        imageUrl:"/static/images/nvsheng.jpg"
+    if (from === 'button') {
+      return {
+        title: "自定义video页面button转发",
+        path: "/pages/video/video",
+        imageUrl: "/static/images/nvsheng.jpg"
       }
-    }else{
-      return{
-        title:"自定义menu转发",
-        path:"/pages/video/video",
-        imageUrl:"/static/images/nvsheng.jpg"
+    } else {
+      return {
+        title: "自定义menu转发",
+        path: "/pages/video/video",
+        imageUrl: "/static/images/nvsheng.jpg"
       }
     }
   }

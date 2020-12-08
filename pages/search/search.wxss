@@ -1,0 +1,138 @@
+/* pages/search/search.wxss */
+
+.searchContainer {
+    height: 100%;
+    padding: 0 20rpx;
+}
+
+.header {
+    display: flex;
+    height: 60rpx;
+    position: relative;
+    margin-top: 12rpx;
+}
+
+.header .inputSearch {
+    width: 90%;
+    padding-left: 32rpx;
+    box-sizing: border-box;
+    background: rgba(237, 237, 237, 0.3);
+    border-radius: 30rpx;
+}
+.header .cha{
+    position: absolute;
+    top: 0;
+    right: 100rpx;
+    z-index: 10;
+}
+.search {
+    width: 32rpx;
+    /* font-size: 32rpx; */
+    height: 60rpx;
+    line-height: 50rpx;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.cancel {
+    width: 100rpx;
+    height: 30rpx;
+    font-size: 32rpx;
+    line-height: 30rpx;
+}
+
+/* 搜索列表 */
+
+.searchList {
+    padding: 0 10rpx;
+    box-sizing: border-box;
+}
+
+.searchContent {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #d43c33;
+    font-size: 32rpx;
+    border-bottom: 1px solid #d43c33;
+}
+
+.searchShow {
+    display: flex;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.searchShow .searchName {
+    height: 80rpx;
+    flex: 1;
+    border-bottom: 1px solid #eee;
+    font-size: 26rpx;
+    margin-left: 10rpx;
+}
+
+/* 热搜榜 */
+
+.hotSearch {
+    width: 100%;
+    margin-top: 30rpx;
+}
+
+.hotSearch .title {
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.hotSearch .hotMusic {
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 热搜列表 */
+/* 搜索历史 */
+.history{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+/* .history .title{
+    height: 50rpx;
+    padding:0 10rpx;
+    box-sizing: border-box;
+    font-size: 24rpx;
+    
+} */
+.history .historyList{
+    padding:0 10rpx;
+    box-sizing: border-box;
+    text-align: center;
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 24rpx;
+    background-color: #ededed;
+    border-radius: 30rpx;
+    margin-left: 10rpx;
+    margin-bottom: 10rpx;
+}
+.history .delete{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.hotList {
+    width: 50%;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.hotList text {
+    font-size: 24rpx;
+}
+
+.imageIcon {
+    width: 24rpx;
+    height: 24rpx;
+    margin-left: 10rpx;
+}

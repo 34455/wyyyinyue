@@ -1,0 +1,5 @@
+<template name="myTap">
+  <view class="title">我的自定义模板</view>
+  <view>名字:{{name}}</view>
+  <view>年龄:{{age}}</view>
+</template>

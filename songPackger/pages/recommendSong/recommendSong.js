@@ -1,5 +1,5 @@
 // pages/recommendSong/recommendSong.js
-import request from "../../utils/request.js"
+import request from "../../../utils/request.js"
 import pubsub from 'pubsub-js'
 Page({
 
@@ -10,7 +10,8 @@ Page({
     year: '',  //年
     month: '', //月
     day: '', //日
-    recommendList:[]
+    recommendList: [], //每日歌曲播放列表
+    index: ""
   },
 
   /**
@@ -32,10 +33,28 @@ Page({
       })
     }
     this.getRecommendList()
-    pubsub.subscribe('switchType',(msg,type)=>{
-      console.log(type)
-     })
-  //  获取时间
+    pubsub.subscribe('switchType', (msg, type) => {
+      
+      let { index, recommendList } = this.data
+      if (type == 'pre') {
+        index -= 1
+        if (index === 0) {
+          index = recommendList.length - 1
+        }
+      } else {
+        index += 1
+        if (index === recommendList.length - 1) {
+          index = 0
+        }
+      }
+      this.setData({
+        index
+      })
+      let musicId = recommendList[index].id
+      // 发布消息
+      pubsub.publish('musicId', musicId)
+    })
+    //  获取时间
     this.setData({
       year: new Date().getFullYear(),
       month: (new Date().getMonth() + 1 + "").padStart(2, 0),
@@ -44,21 +63,26 @@ Page({
 
   },
   // 获取播放列表
-  async getRecommendList(){
+  async getRecommendList() {
     let recommendList = await request('/recommend/songs')
     // console.log("list",recommendList)
     this.setData({
-      recommendList:recommendList.recommend
+      recommendList: recommendList.recommend
     })
     // console.log(this.data.recommendList)
   },
-  toSongdetail(event){
-    let {song} =event.currentTarget.dataset
+  toSongdetail(event) {
+    console.log(event)
+    let { song, index } = event.currentTarget.dataset
+    this.setData({
+      index
+    })
+
     wx.navigateTo({
-      url: '/pages/songDetail/songDetail?musicId='+song,
+      url: '/songPackger/pages/songDetail/songDetail?musicId=' + song,
     })
     // console.log(event)
-   
+
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

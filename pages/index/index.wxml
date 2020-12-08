@@ -11,9 +11,9 @@
             <text class="iconfont icon-tuijian"></text>
             <text class="navFont">每日推荐</text>
         </view>
-        <view class="nav">
+        <view class="nav" bindtap="toOther">
             <text class="iconfont icon-gedan"></text>
-            <text class="navFont">other页面</text>
+            <text class="navFont" >other页面</text>
         </view>
         <view class="nav">
             <text class="iconfont icon-paixingbang"></text>

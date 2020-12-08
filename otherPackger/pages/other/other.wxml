@@ -1,0 +1,11 @@
+<!--pages/other/other.wxml-->
+<import src="../../../templater/mytemplate"></import>
+<view>
+  other页面
+</view>
+<template is="myTap" data="{{...page}}"></template>
+
+
+<view>=========</view>
+<view>=========</view>
+<button bindtap="handleOpenId">获取openId</button>
